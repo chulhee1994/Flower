@@ -1,0 +1,45 @@
+--------------------------------------------------------
+--  파일이 생성됨 - 토요일-2월-25-2023   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table T_MEMBER
+--------------------------------------------------------
+
+  CREATE TABLE "C##SCOTT"."T_MEMBER" 
+   (	"ID" VARCHAR2(10 BYTE), 
+	"PWD" VARCHAR2(10 BYTE), 
+	"NAME" VARCHAR2(50 BYTE), 
+	"EMAIL" VARCHAR2(50 BYTE), 
+	"JOINDATE" DATE DEFAULT sysdate
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+REM INSERTING into C##SCOTT.T_MEMBER
+SET DEFINE OFF;
+Insert into C##SCOTT.T_MEMBER (ID,PWD,NAME,EMAIL,JOINDATE) values ('hong','1212','홍길동','hong@gmail.com',to_date('23/02/05 16:27:15','RR/MM/DD HH24:MI:SS'));
+Insert into C##SCOTT.T_MEMBER (ID,PWD,NAME,EMAIL,JOINDATE) values ('lee','1212','이순신','lee@test.com',to_date('23/02/05 16:27:15','RR/MM/DD HH24:MI:SS'));
+Insert into C##SCOTT.T_MEMBER (ID,PWD,NAME,EMAIL,JOINDATE) values ('kim','1212','김유신','kim@naver.com',to_date('23/02/05 16:27:15','RR/MM/DD HH24:MI:SS'));
+--------------------------------------------------------
+--  DDL for Index SYS_C008364
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##SCOTT"."SYS_C008364" ON "C##SCOTT"."T_MEMBER" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  Constraints for Table T_MEMBER
+--------------------------------------------------------
+
+  ALTER TABLE "C##SCOTT"."T_MEMBER" ADD PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
