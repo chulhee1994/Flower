@@ -1,6 +1,6 @@
 <h1>오늘의 꽃</h1>
 <h2>웹 프로젝트</h2>
-<img src="https://img.shields.io/badge/Scss-green?style=flat&logo=Sass&logoColor=CC6699"/>
+<a href=><img src="https://img.shields.io/badge/Scss-green?style=flat&logo=Sass&logoColor=CC6699"/></a>
 <img src=https://user-images.githubusercontent.com/61037406/226539032-ca83b307-c0fb-44c8-b964-cfa97962a4d4.png>
 <img src=https://user-images.githubusercontent.com/61037406/226539411-0ed3909a-7347-4c76-8310-29f51bf3f94c.png>
 <p>스프링 MVC를 활용한 웹 프로젝트 입니다.</p>
